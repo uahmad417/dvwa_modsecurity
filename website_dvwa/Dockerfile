@@ -15,7 +15,7 @@ ENV DB_DATABASE="dvwa"
 ENV DB_USER="dvwa"
 ENV DB_PASSWORD="p@ssw0rd"
 ENV DB_PORT="3306"
-ENV DB_SEC_LEVEL="low"
+ENV DVWA_SEC_LEVEL="low"
 COPY start.sh ./
 EXPOSE 80
 CMD bash start.sh
