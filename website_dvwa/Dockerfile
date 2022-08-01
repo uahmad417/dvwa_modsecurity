@@ -10,12 +10,12 @@ RUN mv ./DVWA/config/config.inc.php.dist ./DVWA/config/config.inc.php \
 	&& sed -i 's/allow_url_include = Off/allow_url_include = On/g' /usr/local/etc/php/php.ini \
 	&& sed -i 's/allow_url_fopen = Off/allow_url_fopen = On/g' /usr/local/etc/php/php.ini
 RUN mv DVWA/* ./ && rm -rf DVWA 
-ENV DB_SERVER="127.0.0.1"
+ENV DB_SERVER="mysql"
 ENV DB_DATABASE="dvwa"
 ENV DB_USER="dvwa"
 ENV DB_PASSWORD="p@ssw0rd"
 ENV DB_PORT="3306"
-ENV DVWA_SEC_LEVEL="low"
+ENV DVWA_SEC_LEVEL="impossible"
 COPY start.sh ./
 EXPOSE 80
 CMD bash start.sh
